@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main # Adjust this to match your main branch name
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Build Environment
+        run: |
+          sudo apt-get update
+          sudo apt-get install g++
+
+      - name: Build
+        run: |
+          make # Replace with your build command
