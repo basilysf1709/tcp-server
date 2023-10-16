@@ -15,9 +15,11 @@ class TCPClientServiceManager {
   private:
 
   public:
-    TCPServerController *tcp_controller;
+    TCPServerController *tcp_server_controller;
     TCPClientServiceManager(TCPServerController *);
     ~TCPClientServiceManager();
+
+    void StartTCPClientServiceManagerThread();
 };
 
 #endif

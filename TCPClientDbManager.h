@@ -17,9 +17,10 @@ class TCPClientDbManager {
     list<TCPClient *> tcp_client_db;
 
   public:
-    TCPServerController *tcp_controller;
+    TCPServerController *tcp_server_controller;
     TCPClientDbManager(TCPServerController *);
     ~TCPClientDbManager();
+    void StartTCPClientDbInit();
 };
 
 #endif
